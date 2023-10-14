@@ -3,6 +3,7 @@ import axios from "axios";
 export const INCREMENT = "account/increment";
 export const DECREMENT = "account/decrement";
 export const INCREMENT_BY_AMOUNT = "account/incrementByAmount";
+export const DECREMENT_BY_AMOUNT = "account/decrementByAmount";
 export const INIT = "account/init";
 export const INCREMENT_BONUS = "bonus/increment";
 export const GET_USER_ACCOUNT_PENDING = "account/getUser/pending";
@@ -46,6 +47,9 @@ export function decrement() {
 
 export function incrementByAmount(value) {
   return { type: INCREMENT_BY_AMOUNT, payload: value };
+}
+export function decrementByAmount(value) {
+  return { type: DECREMENT_BY_AMOUNT, payload: value };
 }
 
 export function incrementBonus() {
